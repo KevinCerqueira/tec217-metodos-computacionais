@@ -1,0 +1,49 @@
+Escreva o algoritmo "Método da Newton-Raphson" usando o octave para a função abaixo:
+
+f(x) = e^-6 -x
+
+X0 = 0
+
+tol = 1x10^-4
+
+r = 0,56714329
+
+Entrada do algoritmo: função f(x); função iterações g(x); Ponto inicial X0;Limite do erro, sigma; Limite de iterações, N;
+
+Saida do algoritmo: Valor aproximado da raiz da função, ou mensagem de erro 
+
+Escreva iteração por iteração, Xr - raiz aproximada, f(Xr), erro aproximado e verdadeiro (se houver raiz exata para computação)
+
+Escreva o algoritmo "Método da Newton-Raphson" usando o octave para a função abaixo:
+
+f(x) = x^10 - 1
+
+X0 = 0,5
+
+tol = 0,0001
+
+r = 0,56714329
+
+Entrada do algoritmo: função f(x); função iterações g(x); Ponto inicial X0;Limite do erro, sigma; Limite de iterações, N;
+
+Saida do algoritmo: Valor aproximado da raiz da função, ou mensagem de erro 
+
+Escreva iteração por iteração, Xr - raiz aproximada, f(Xr), erro aproximado e verdadeiro (se houver raiz exata para computação)
+
+
+
+escreva o algoritmo "Método da Secante" usando o octave para a função abaixo:
+
+f(x) = x - 2sen(x) - as
+
+X0 = 1,8
+
+X1 = 2
+
+tol = 0,0001
+
+Entrada do algoritmo: função f(x); função iterações g(x); Ponto inicial X0;Limite do erro, sigma; Limite de iterações, N;
+
+Saida do algoritmo: Valor aproximado da raiz da função, ou mensagem de erro 
+
+Escreva iteração por iteração, Xr - raiz aproximada, f(Xr), erro aproximado e verdadeiro (se houver raiz exata para computação)

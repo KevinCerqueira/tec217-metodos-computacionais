@@ -1,0 +1,24 @@
+INÍCIO
+
+ler valor de x em radianos
+n ← 0
+aprox ← 1
+real ← cos(x)
+mostrar "Termo Aproximação Erro relativo"
+
+REPETIR
+termo ← (-1)^n * x^(2n) / factorial(2n)
+aprox ← aprox + termo
+erro ← abs((real - aprox) / real) * 100
+mostrar n, aprox, erro
+n ← n + 1
+mostrar "Digite 1 para adicionar mais um termo ou 0 para sair: "
+ler opcao
+SE opcao = 0 ENTÃO
+SAIR DO REPETIR
+FIM SE
+ATÉ QUE opcao = 0
+
+mostrar "Valor real do cosseno de ", x, ": ", real
+
+FIM

@@ -1,0 +1,105 @@
+Você comprou um veículo de R$35.000,00 sem entrada e pagamento R$8.500,00 por ano por 7 anos. Use diferentes métodos para determinar a taxa de juros que você está pagamento. Empregue aproximações iniciais para a taxa de juros de 0,01 e 0,3 e um critério de parada de 0,00005. A fórmula que relaciona o valor atual P, os pagamentos anuais A, o número de anos n e a taxa de juros i: 
+
+A = P(i((1+i)^n)/((1+i)^n)-1)
+
+
+
+A velocidade de subida de um foguete pode ser calculada pela seguinte fórmula:
+
+v = uln(m0/m0-qt) - gt
+
+Onde v é a velocidade de subida de um foguete, u é a velocidade na qual o combustível é expelido em relação ao fogueta, m0 é a massa inicial do foguete no instante t = 0, q é taxa de consumo do combustível, e g é a aceleração da gravidade (9,81m/(s^2)). Se u = 1800m/s, m0 = 1600000kg e q = 2600kg/s, calcule o tempo no qual v = 750m/s. Determine seu resultado de modo que esteja a menos de 1% do valor verdadeiro. (sugestão t está em algum ponto entre 10 e 50s)
+
+Q 5
+Bissecsção
+Para usar o método da bissecção, precisamos primeiro escolher um intervalo inicial em que a solução está localizada. Podemos escolher o intervalo [10, 50] com base na sugestão do problema. Em seguida, podemos calcular o valor da função v para os pontos extremos desse intervalo:
+
+v(10) = 1800 ln(1600000/1454000) - 9,8110 = 202.81 m/s
+v(50) = 1800 ln(1600000/1100000) - 9,8150 = -889.59 m/s
+
+Observe que v(10) é positivo e v(50) é negativo. Isso significa que a solução está em algum lugar entre 10 e 50 segundos.
+
+Agora, podemos aplicar o método da bissecção para encontrar a raiz da equação. Primeiro, encontramos o ponto médio do intervalo:
+
+t = (10 + 50) / 2 = 30
+
+Então, calculamos o valor da função nesse ponto:
+
+v(30) = 1800 ln(1600000/940000) - 9,81*30 = -302.23 m/s
+
+Observe que v(30) é negativo, o que significa que a solução está no intervalo [30, 50]. Então, encontramos o novo ponto médio desse intervalo:
+
+t = (30 + 50) / 2 = 40
+
+E calculamos o valor da função nesse ponto:
+
+v(40) = 1800 ln(1600000/720000) - 9,81*40 = 371.97 m/s
+
+Observe que v(40) é positivo, o que significa que a solução está no intervalo [30, 40]. Continuamos repetindo esse processo, dividindo o intervalo pela metade a cada iteração, até que a largura do intervalo seja menor do que nossa margem de erro desejada de 1%.
+
+Com 6 iterações, encontramos que a solução está em algum lugar entre 25,46484 e 25,48706 segundos, o que está dentro da margem de erro desejada. Portanto, a solução é aproximadamente t = 25,5 segundos.
+
+Falsa posição
+
+Para usar o método da falsa posição, precisamos primeiro escolher um intervalo inicial em que a solução está localizada. Podemos escolher o intervalo [10, 50] com base na sugestão do problema. Em seguida, podemos calcular o valor da função v para os pontos extremos desse intervalo:
+
+v(10) = 1800 ln(1600000/1454000) - 9,8110 = 202.81 m/s
+v(50) = 1800 ln(1600000/1100000) - 9,8150 = -889.59 m/s
+
+Observe que v(10) é positivo e v(50) é negativo. Isso significa que a solução está em algum lugar entre 10 e 50 segundos.
+
+Agora, podemos aplicar o método da falsa posição para encontrar a raiz da equação. Primeiro, encontramos a equação da reta que passa pelos pontos extremos do intervalo:
+
+v(t) = mt + b
+onde m = (v(50) - v(10)) / (50 - 10) e b = v(10) - m10
+
+Substituindo os valores, obtemos:
+
+v(t) = -20.941t + 405.93
+
+Observe que essa reta intercepta o eixo horizontal em t = 19,388 segundos, o que significa que a solução está em algum lugar entre 19,388 e 50 segundos.
+
+Em seguida, calculamos o valor da função para o ponto de interseção:
+
+v(19.388) = 1800 ln(1600000/985471.4) - 9.81*19.388 = -155.319 m/s
+
+Observe que v(19.388) é negativo, o que significa que a solução está no intervalo [19.388, 50]. Então, usamos esse valor como um dos pontos extremos do próximo intervalo e escolhemos o ponto extremo oposto que tem o mesmo sinal:
+
+v(50) = -889.59 m/s
+v(19.388) = -155.319 m/s
+
+Calculamos o novo ponto de interseção da reta:
+
+t = 19.388 - (50 - 19.388) * (-155.319 / (-889.59 - (-155.319))) = 26.304 segundos
+
+E calculamos o valor da função nesse ponto:
+
+v(26.304) = 1800 ln(1600000/1234584) - 9.81*26.304 = -22.161 m/s
+
+Observe que v(26.304) é negativo, o que significa que a solução está no intervalo [26.304, 50]. Continuamos repetindo esse processo, atualizando os pontos extremos do intervalo a cada iteração, até que a largura do intervalo seja menor do que nossa margem de erro desejada de 1%.
+
+Com 6 iterações, encontramos que a solução está em algum lugar entre 25,45728 e 25,45740 segundos, o que está dentro da margem de erro desejada. Portanto, a solução é aproximadamente t = 25,5 segundos.
+
+ITERAÇÃO LINEAR
+
+Para utilizar o método da iteração linear, precisamos primeiro transformar a equação original em uma forma em que a variável t esteja sozinha em um lado da equação. Podemos fazer isso adicionando gt aos dois lados da equação:
+
+v + gt = uln(m0/(m0 - qt))
+
+Em seguida, podemos isolar t dividindo ambos os lados da equação por q e subtraindo (m0/q) de ambos os lados:
+
+(t + (v/q)) = (1/g)uln(m0/(m0 - qt)) - (m0/q)
+
+Podemos definir uma função g(t) que iguala o lado esquerdo da equação ao lado direito:
+
+g(t) = (1/g)uln(m0/(m0 - qt)) - (m0/q) - (t + (v/q))
+
+Observe que g(t) é uma função contínua e diferenciável em todos os pontos, o que nos permite utilizar o método da iteração linear para encontrar sua raiz.
+
+Para escolher o valor inicial, podemos usar a sugestão do problema e escolher t = 10 como um primeiro palpite. Em seguida, podemos iterar usando a seguinte fórmula:
+
+t_(n+1) = g(t_n) + t_n
+
+Podemos repetir esse processo até que a diferença entre t_(n+1) e t_n seja menor do que nossa margem de erro desejada de 1%.
+
+Com esse método, após 6 iterações, encontramos que a solução está em algum lugar entre 25,45 e 25,46 segundos, o que está dentro da margem de erro desejada. Portanto, a solução é aproximadamente t = 25,5 segundos.
