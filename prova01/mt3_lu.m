@@ -6,8 +6,6 @@ A = [4, -1, -1, 0;
      
 b = [175; 100; 75; 0];
 
-
-
 function [L, U] = lu_decomposition(A)
     n = length(A);
     L = eye(n);
