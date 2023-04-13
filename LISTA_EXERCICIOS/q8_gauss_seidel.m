@@ -39,7 +39,7 @@ while true
   std_devs = [std_devs, std(absolute_error)];
   
   % Exibir a iteração e a solução atual
-  disp(['Iteração ', num2str(iteration), ':']);
+  disp(['Iteracao ', num2str(iteration), ':']);
   disp(x);
   
   % Verificar se o erro relativo percentual máximo é menor que Es
@@ -52,29 +52,29 @@ while true
 end
 
 % Exibir o número de iterações e a solução final
-disp(['Número de iterações: ', num2str(iteration)]);
-disp(['Solução final:']);
+disp(['Numero de iteracoes: ', num2str(iteration)]);
+disp(['Solucao final:']);
 disp(x);
 
 % Gerar gráficos de convergência
 figure;
 subplot(3, 1, 1);
 plot(1:iteration, errors_relative, 'o-');
-xlabel('Número de iterações');
-ylabel('Erro relativo percentual máximo');
-title('Convergência do método de Gauss-Seidel (Erro relativo)');
+xlabel('Numero de iteracoes');
+ylabel('Erro relativo percentual maximo');
+title('Convergencia do metodo de Gauss-Seidel (Erro relativo)');
 grid on;
 
 subplot(3, 1, 2);
 plot(1:iteration, errors_absolute, 'o-');
-xlabel('Número de iterações');
-ylabel('Erro absoluto máximo');
-title('Convergência do método de Gauss-Seidel (Erro absoluto)');
+xlabel('Numero de iteracoes');
+ylabel('Erro absoluto maximo');
+title('Convergência do metodo de Gauss-Seidel (Erro absoluto)');
 grid on;
 
 subplot(3, 1, 3);
 plot(1:iteration, std_devs, 'o-');
-xlabel('Número de iterações');
-ylabel('Desvio padrão');
-title('Convergência do método de Gauss-Seidel (Desvio padrão)');
+xlabel('Numero de iteracoes');
+ylabel('Desvio padrao');
+title('Convergencia do metodo de Gauss-Seidel (Desvio padrao)');
 grid on;

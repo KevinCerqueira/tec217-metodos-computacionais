@@ -48,4 +48,4 @@ bar(bar_matrix);
 xlabel('Indice do elemento');
 ylabel('Valor absoluto');
 legend({'A', 'A^{-1}'});
-title('Comparação dos elementos de A e A^{-1}');
+title('Comparacao dos elementos de A e A^{-1}');

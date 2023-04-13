@@ -25,7 +25,7 @@ M = D + w * L;
 N = (1 - w) * D - w * U;
 
 if max(abs(eig(inv(M) * N))) >= 1
-  disp('O sistema não converge com os parâmetros escolhidos.');
+  disp('O sistema nao converge com os parametros escolhidos.');
 else
   % Método Gauss-Seidel com relaxamento
   while iteration < max_iterations
@@ -54,22 +54,22 @@ else
   figure;
   subplot(3, 1, 1);
   plot(errors_relative, 'o-');
-  xlabel('Iterações');
+  xlabel('Iteracoes');
   ylabel('Erro Relativo Percentual');
   title('Convergência (Erro Relativo)');
   grid on;
 
   subplot(3, 1, 2);
   plot(errors_absolute, 'o-');
-  xlabel('Iterações');
+  xlabel('Iteracoes');
   ylabel('Erro Absoluto');
   title('Convergência (Erro Absoluto)');
   grid on;
 
   subplot(3, 1, 3);
   plot(std_devs, 'o-');
-  xlabel('Iterações');
-  ylabel('Desvio Padrão');
-  title('Convergência (Desvio Padrão)');
+  xlabel('Iteracoes');
+  ylabel('Desvio Padrao');
+  title('Convergência (Desvio Padraoo)');
   grid on;
 end
