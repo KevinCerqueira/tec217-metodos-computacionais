@@ -1,5 +1,3 @@
-printf("Aluno: Kevin Cerqueira Gomes \n");
-
 f = @(x) (x/2)^2 - sin(x);
 a = 1;
 b = 2;

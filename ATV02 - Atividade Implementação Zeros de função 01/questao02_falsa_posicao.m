@@ -1,6 +1,3 @@
-printf("Aluno: Kevin Cerqueira Gomes \n");
-
-
 % Define a função f(x) como uma função anônima
 f = @(x) x^3 - 9*x + 3;
 
