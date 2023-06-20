@@ -1,4 +1,4 @@
-# TEC217 Métodos Computacionais
+# TEC217 Métodos Computacionais 2023.1
 
 Use com sabedoria! E se lhe ajudar, dê uma estrela!
 
